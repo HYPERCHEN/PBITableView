@@ -107,6 +107,7 @@
         PBITableViewCellModel *base2 = [[PBITableViewCellModel alloc] init];
         base2.height = 50;
         base2.renderBlock = ^UITableViewCell *(NSIndexPath *indexPath, UITableView *tableView) {
+            
             PBIManageTextFieldCell *cell = [PBIManageTextFieldCell cellWithIdentifier:@"123" tableView:tableView style:PBIManageTextFieldCellStyleWithLeftIcon];
             cell.leftIcon.image = [UIImage imageNamed:@"avator"];
             cell.titleLabel.text = @"Signature";
