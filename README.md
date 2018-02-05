@@ -49,12 +49,16 @@ PBITableView uses this simple functions to create:
     [self.tableView headerView:^(PBITableViewSectionModel *sectionModel){
         //Set HeaderView
     } withCells:^(NSMutableArray *cellArray) {
-        //Return specific cell
-        UITableViewCell *cell = [UITableViewCell new];
-        [cellArray addObject:cell]
-        return cell;
+        //Set CellModel Arrays
+        PBITableViewCellModel *cellModel = [PBITableViewCellModel new];
+        cellModel.height = 50;
+        cellModel.renderBlock=^UITableViewCell *(NSIndexPath *indexPath, UITableView *tableView) {
+            //Init Cell Instance
+            return cell;
+            };
+        }; 
+        [cellArray addObject:cellModel];
     };
-        [cellArray addObject:base1];
     } footerView:^(PBITableViewSectionModel *sectionModel){
         //Set footerView
     }];
