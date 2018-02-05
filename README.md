@@ -1,5 +1,4 @@
-
-![Artboard.png](http://upload-images.jianshu.io/upload_images/1079898-aad8b4e240d26518.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Artboard.png](http://upload-images.jianshu.io/upload_images/1079898-aad8b4e240d26518.png)
 
 [![language](https://img.shields.io/badge/Language-Objective--C-7D6FFF.svg)](https://developer.apple.com/documentation/objectivec)&nbsp;
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;
@@ -9,9 +8,9 @@
 
 PBITableView is a kind of delightful tableview using MVVM.Compare the old ways, it provides a simply function to create the every single section, which makes creating complex tableview likes building blocks.What's more, it is convenient to provides some cell styles for static view.Hope it could help the iOS developers.
 
-#Common View we need build
+## Common View we need build
 
-<img src="http://upload-images.jianshu.io/upload_images/1079898-68a623273277b663.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "200" height = "356" alt="TableView"align=center />
+![WechatIMG2.jpeg](http://upload-images.jianshu.io/upload_images/1079898-4f71b5954638fa33.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 This type of tableview has several feature:
 
@@ -21,7 +20,8 @@ This type of tableview has several feature:
 
 Therefor we need to improve it.
 
-#The old ways to create
+## The old ways to create
+
 ```objective-c
 self.tableview.delegate   = self;
 self.tableview.datasource = self;
@@ -35,7 +35,8 @@ self.tableview.datasource = self;
 ```
 Obviously, in this way, we need realize so many these functions and it is annoying especially we just want to realize some simple tableviews.
 
-#The new ways to create 
+## The new ways to create 
+
 PBITableView uses this simple functions to create:
 
 ```objective-c
@@ -63,7 +64,8 @@ Above all, it is the code about how to create a tableview with a section.All u n
 
 I have written a demo in project.U can look up in detail.
 
-#The way to use manage style cells
+## The way to use manage style cells
+
 `PBIManageCell` provides 5 styles cell.Each cells have their own styles too.Pick the `style` when init the cell.
 For example, I would use the `PBIMangeSwitchCell` to express it.
 
@@ -87,12 +89,13 @@ For example, I would use the `PBIMangeSwitchCell` to express it.
 ```
 According to the different cells, it provides aimed properties and blocks to edit.  
 
-#Warning Retain cycle
+## Warning Retain cycle
 
 Because of the block usage, please notice the retain cycle problem.
 u can use this `__weak __typeof__(object) weak_object = object` and `__strong __typeof__(object) strong_object = object ` to avoid this problem
 
-#Code Structure
+## Code Structure
+
 There are two main parts : `PBIManageCell` and `PBITableView`
 
 `PBIManageCell` contains:
@@ -110,11 +113,13 @@ There are two main parts : `PBIManageCell` and `PBITableView`
 * `PBITableViewSectionModel.h`
 * `PBITableViewCellModel.h`
 
-#Installation
+## Installation
+
     #import PBIManageCell.h
     #import PBITableView.h
     //Then use the function in "The new ways to create" :）
-#License
+
+## License
 PBITableView is released under the MIT license. See LICENSE for details.
 
 
