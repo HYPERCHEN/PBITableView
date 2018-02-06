@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PBIManageTableView"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A tableview constructed by MVVM and"
 
   # This description is used to generate tags and improve search results.
