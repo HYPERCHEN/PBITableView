@@ -23,10 +23,13 @@ extern CGFloat PBI_kManageCellPaddingPercent = 0.04;
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
+        void *x = malloc(1024);
         [self initUI];
     }
     return self;
 }
+
+
 
 
 +(PBIManageBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier
